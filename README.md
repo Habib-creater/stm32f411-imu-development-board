@@ -252,7 +252,7 @@ The native Altium Designer project is located in:
 3. Open the Altium project:
 
 ```text
-hardware/altium/STM32_PCB.PrjPcb
+hardware/altium/STM32_PCB.PrjPcb```
 
 ---
 
