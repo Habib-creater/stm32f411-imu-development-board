@@ -1,54 +1,103 @@
 # STM32F411 IMU Development Board
 
-A compact STM32F411-based development board designed around an **STM32F411CEU6** microcontroller and **MPU-6050** 6-axis inertial measurement unit (IMU), with USB connectivity, 3.3 V regulation, SWD programming/debug access, GPIO expansion, and status indication.
+<p align="center">
+  <img src="docs/images/3d_1.png" alt="STM32F411 IMU Development Board" width="750">
+</p>
 
-> **Status:** Hardware design files and manufacturing outputs included. Validate the design and manufacturing outputs before production.
+<p align="center">
+  A compact 4-layer STM32F411 development board featuring an MPU-6050 6-axis IMU, USB connectivity, SWD debugging, GPIO expansion, and regulated 3.3 V power.
+</p>
 
-## Highlights
+<p align="center">
+  <img src="https://img.shields.io/badge/MCU-STM32F411CEU6-blue" alt="STM32F411CEU6">
+  <img src="https://img.shields.io/badge/IMU-MPU--6050-green" alt="MPU-6050">
+  <img src="https://img.shields.io/badge/PCB-4--Layer-orange" alt="4 Layer PCB">
+  <img src="https://img.shields.io/badge/CAD-Altium%20Designer-red" alt="Altium Designer">
+  <img src="https://img.shields.io/badge/USB-Micro--USB-lightgrey" alt="Micro USB">
+</p>
 
-- **MCU:** STM32F411CEU6
-- **IMU:** MPU-6050
-- **USB:** Micro-USB connector
-- **Power:** USB 5 V input with AMS1117-3.3 regulation
-- **Programming / Debug:** SWD header
-- **Expansion:** GPIO header
-- **Clock:** 24 MHz crystal
-- **PCB:** 2-layer Altium Designer layout
-- **Manufacturing:** Gerber and drill outputs included
-- **Documentation:** Schematic PDF, PCB renders, layer views, and BOM
+---
 
-## Repository Structure
+## Overview
 
-```text
-.
-├── hardware/
-│   ├── altium/                 # Native Altium project and design files
-│   └── cam/                    # Altium CAM/CAMtastic files
-├── manufacturing/
-│   └── gerbers/                # Gerber + drill manufacturing outputs
-├── bom/
-│   └── STM32_PCB_BOM.csv       # Bill of materials
-├── docs/
-│   ├── schematics/
-│   │   └── STM32_Schematics.pdf
-│   └── images/                 # PCB layout and 3D renders
-├── .github/
-│   └── ISSUE_TEMPLATE/
-├── .gitignore
-├── CONTRIBUTING.md
-└── README.md
-```
+The **STM32F411 IMU Development Board** is a compact embedded hardware platform built around the **STM32F411CEU6** microcontroller and **MPU-6050** 6-axis inertial measurement unit.
+
+The board is designed for embedded development, motion sensing, firmware experimentation, sensor interfacing, and rapid prototyping.
+
+The hardware includes USB connectivity, regulated 3.3 V power, SWD programming/debug access, GPIO expansion, reset and boot control, and status indication.
+
+The PCB is designed as a **4-layer board using Altium Designer**, with complete design source files and manufacturing outputs included in this repository.
+
+> **Design Status:** Hardware design files, documentation, BOM, and manufacturing outputs are included. Always validate the schematic, PCB, DRC/ERC results, component availability, and manufacturing files before production.
+
+---
+
+## Features
+
+| Feature | Details |
+|---|---|
+| Microcontroller | STM32F411CEU6 |
+| IMU | MPU-6050 6-axis accelerometer + gyroscope |
+| USB | Micro-USB connector |
+| Power Input | USB 5 V |
+| Voltage Regulation | AMS1117-3.3 |
+| Debug / Programming | SWD |
+| Sensor Interface | I²C |
+| Expansion | GPIO header |
+| Clock | 24 MHz crystal |
+| PCB | 4-layer PCB |
+| PCB CAD | Altium Designer |
+| Manufacturing | Gerber + drill files |
+| Documentation | Schematic PDF, PCB views, BOM, manufacturing outputs |
+
+---
 
 ## Hardware Architecture
 
-The design is organized around four main functional areas:
+The board is organized into four primary functional sections:
 
-1. **STM32F411CEU6 microcontroller** — main processing and control.
-2. **MPU-6050 IMU** — accelerometer/gyroscope sensing connected through I²C.
-3. **USB + power stage** — USB input, ferrite filtering, 5 V rail and AMS1117-3.3 regulation.
-4. **Debug / expansion** — SWD interface and GPIO breakout for development and integration.
+### 1. STM32F411CEU6 Microcontroller
 
-### Key Interfaces
+The STM32F411CEU6 acts as the main processing and control device for the board.
+
+It provides the processing resources required for firmware development, peripheral control, sensor communication, USB connectivity, and external GPIO interfacing.
+
+### 2. MPU-6050 IMU
+
+The MPU-6050 provides:
+
+- 3-axis accelerometer
+- 3-axis gyroscope
+- I²C communication
+
+The IMU is connected to the STM32F411 through the I²C interface.
+
+### 3. USB and Power
+
+The board accepts power through the Micro-USB connector.
+
+The power section provides:
+
+- USB 5 V input
+- Power filtering
+- 3.3 V regulation
+- AMS1117-3.3 regulator
+
+The regulated 3.3 V rail supplies the board's low-voltage circuitry.
+
+### 4. Debug and Expansion
+
+The board provides interfaces for development and external integration, including:
+
+- SWD programming/debugging
+- GPIO expansion
+- NRST reset control
+- BOOT0 boot configuration
+- Status indication
+
+---
+
+## Key Interfaces
 
 | Interface | Purpose |
 |---|---|
@@ -56,122 +105,55 @@ The design is organized around four main functional areas:
 | SWD | Programming and debugging |
 | I²C | MPU-6050 communication |
 | GPIO | External expansion |
-| NRST / BOOT0 | MCU reset and boot control |
+| NRST | MCU reset |
+| BOOT0 | MCU boot configuration |
 
-## Design Files
+---
 
-The native Altium project is located in [`hardware/altium/`](hardware/altium/).
+## PCB Design
 
-Main files include:
+The board uses a **4-layer PCB architecture** designed in Altium Designer.
 
-- `STM32_PCB.PrjPcb` — Altium project
-- `STM32_PCB.PcbDoc` — PCB layout
-- `STM32_Schematics.SchDoc` — schematic
-- `STM32_PCB.OutJob` — output job configuration
-- `STM32_PCB.BomDoc` — Altium BOM document
-- `STM32_PCB.PrjPcbStructure` — project structure data
+The repository includes the native Altium project together with the associated schematic, PCB layout, project configuration, CAM files, and manufacturing outputs.
 
-**Recommended Altium version:** Open the project in the same or a newer compatible Altium Designer release. If Altium reports conversion warnings, review them before saving changes.
+### PCB Design Highlights
 
-## Manufacturing Outputs
-
-The `manufacturing/gerbers/` directory contains the generated Gerber and drill files, including:
-
-- Copper layers
-- Solder mask
-- Silkscreen / legend
-- Paste layers
-- Board profile
-- Plated and non-plated drill files
-- Assembly / component information
-
-Before ordering PCBs, verify the Gerber package in an independent Gerber viewer and confirm the required stack-up, board thickness, copper weight, solder mask, surface finish, and fabrication tolerances with your PCB manufacturer.
-
-## BOM
-
-The current BOM export is available at [`bom/STM32_PCB_BOM.csv`](bom/STM32_PCB_BOM.csv).
-
-Always cross-check component availability, footprints, ratings, lifecycle status, and approved substitutions before procurement.
-
-## Preview
-
-### 3D Board Render
-
-![3D front render](docs/images/3d_1.png)
-
-### PCB Layout
-
-![PCB layout](docs/images/STM32_layout1.png)
-
-### Layer View
-
-![PCB layer view](docs/images/STM32_layout5.png)
-
-More board views are available in [`docs/images/`](docs/images/).
-
-## Schematic
-
-The exported schematic PDF is available here:
-
-[`STM32_Schematics.pdf`](docs/schematics/STM32_Schematics.pdf)
-
-## Getting Started
-
-### Open the Altium project
-
-Open **`hardware/altium/STM32_PCB.PrjPcb`** in Altium Designer. The project source documents and CAMtastic files are intentionally kept beside the `.PrjPcb` file so Altium can resolve its project-relative document references on another machine.
-
-The project file has also been cleaned of stale generated-output references and machine-specific absolute paths. Manufacturing Gerbers are provided separately under `manufacturing/gerbers/`, while the Altium Output Job uses repository-relative output locations.
-
-
-### For hardware development
-
-1. Install a compatible version of **Altium Designer**.
-2. Clone this repository.
-3. Open `hardware/altium/STM32_PCB.PrjPcb`.
-4. Review the schematic and PCB rules.
-5. Validate ERC/DRC and review all warnings.
-6. Regenerate manufacturing outputs if the design is modified.
-
-### For PCB fabrication
-
-1. Use the files under `manufacturing/gerbers/`.
-2. Open the Gerbers in an independent viewer.
-3. Confirm the board outline and drill files.
-4. Confirm layer order and fabrication specifications with your manufacturer.
-5. Do not fabricate from modified files without first re-validating the design.
-
-## Repository Conventions
-
-- Keep native Altium source files under `hardware/altium/`.
-- Keep generated manufacturing files under `manufacturing/`.
-- Keep documentation and renders under `docs/`.
-- Keep BOM exports under `bom/`.
-- Avoid committing temporary Altium recovery, cache, autosave, or local user files.
-- When making a hardware revision, document the change in the commit message and update the revision notes.
-
-## Known Design Notes
-
-The supplied schematic includes:
-
+- 4-layer PCB
 - STM32F411CEU6 MCU
 - MPU-6050 IMU
-- USB connector
-- AMS1117-3.3 regulator
-- 24 MHz crystal
-- SWD interface
+- USB connectivity
+- 3.3 V regulated power rail
+- SWD programming/debug interface
 - GPIO expansion
-- Reset / boot circuitry
+- Dedicated reset and boot circuitry
 - Status LED circuitry
+- 24 MHz crystal oscillator
 
-This repository description is based on the supplied design files; component values and electrical behavior should be verified directly against the source schematic before production.
+---
 
-## License
+## Repository Structure
 
-No open-source license has been assigned yet. Until a license is added, assume the contents are **all rights reserved** by the copyright holder.
-
-If you intend to publish the design for reuse, choose an appropriate hardware license before advertising the repository as open source.
-
-## Contributing
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution and revision guidelines.
+```text
+.
+├── hardware/
+│   ├── altium/                     # Native Altium project and design files
+│   └── cam/                        # Altium CAM/CAMtastic files
+│
+├── manufacturing/
+│   └── gerbers/                    # Gerber and drill manufacturing outputs
+│
+├── bom/
+│   └── STM32_PCB_BOM.csv           # Bill of materials
+│
+├── docs/
+│   ├── schematics/
+│   │   └── STM32_Schematics.pdf    # Exported schematic
+│   │
+│   └── images/                     # PCB renders and layout images
+│
+├── .github/
+│   └── ISSUE_TEMPLATE/             # GitHub issue templates
+│
+├── .gitignore
+├── CONTRIBUTING.md
+└── README.md
