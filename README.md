@@ -253,3 +253,97 @@ The native Altium Designer project is located in:
 
 ```text
 hardware/altium/STM32_PCB.PrjPcb
+
+---
+
+## Project Status
+
+| Item | Status |
+|---|---|
+| Schematic | ✅ Completed and verified |
+| PCB Layout | ✅ Completed |
+| PCB Layer Count | ✅ 4-layer |
+| Altium Project | ✅ Included |
+| BOM | ✅ Included |
+| Gerber Files | ✅ Generated |
+| Drill Files | ✅ Generated |
+| Documentation | ✅ Included |
+| Hardware Validation | 🔬 To be performed |
+
+---
+
+## Acknowledgements
+
+The electrical design was developed using publicly available reference
+material. The schematic was reviewed and electrically verified as part
+of this project.
+
+The PCB layout, component placement, routing, 4-layer board design,
+Altium project organization, BOM, manufacturing outputs, documentation,
+and repository organization were created by the author.
+
+Third-party reference material remains subject to its original copyright
+and licensing terms.
+
+---
+
+## Contributing
+
+Contributions, suggestions, design reviews, and improvements are welcome.
+
+Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting changes.
+
+For hardware revisions, clearly document:
+
+- What was changed
+- Why it was changed
+- Affected components
+- Schematic changes
+- PCB changes
+- Manufacturing changes
+- Validation performed
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+The MIT License permits use, copying, modification, merging, publishing,
+distribution, sublicensing, and sale of copies of the licensed work,
+subject to the conditions stated in the license.
+
+The complete license terms are available in the
+[`LICENSE`](LICENSE) file in the root of this repository.
+
+**Copyright © 2026 Habib Ur Rehman**
+
+> **Note:** Third-party reference material used in the development of
+> this project remains subject to its original copyright and licensing
+> terms and is not relicensed by this repository.
+
+---
+
+## Author
+
+### Habib Ur Rehman
+
+**Electronics Engineering**  
+**University of Engineering and Technology Peshawar (Abbottabad Campus)**
+
+I am an Electronics Engineering student interested in embedded systems,
+PCB design, microcontrollers, electronics hardware, and hardware
+development.
+
+### Connect
+
+- **GitHub:** [Habib-creater](https://github.com/Habib-creater)
+- **LinkedIn:** [Habib Ur Rehman](https://www.linkedin.com/in/habib-ur-rehman-8321182b4/)
+- **Project:** [STM32F411 IMU Development Board](https://github.com/Habib-creater/stm32f411-imu-development-board)
+
+---
+
+<p align="center">
+  <b>STM32F411 IMU Development Board</b><br>
+  Custom 4-Layer STM32F4 Embedded Hardware Platform
+</p>
