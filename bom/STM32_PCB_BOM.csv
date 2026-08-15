@@ -1,0 +1,21 @@
+Line #,Name,Description,Designator,Revision ID,Revision State,Revision Status,Quantity,Manufacturer 1,Manufacturer Part Number 1,Manufacturer Lifecycle 1,Supplier 1,Supplier Part Number 1,Supplier Unit Price 1,Supplier Subtotal 1
+,,,,,,,,,,,,,,
+1,Custom item 1,,,,Not managed,,0,,,,,,,
+2,GRM188C71C225KE11D,CAP CER 2.2UF 16V X7S 0603,"C1, C2, C7, C13",CMP-06035-000124-3,New From Design,Up to date,4,Murata,GRM188C71C225KE11D,Volume Production,Mouser,81-GRM188C71C225KE1D,0.21,0.84
+3,GRM219R61C226ME15K,"Chip Multilayer Ceramic Capacitors for General Purpose, 0805, 22uF, X5R, 15%, 20%, 16V","C3, C4",CMP-06035-014527-1,New From Design,Up to date,2,Murata,GRM219R61C226ME15K,Volume Production,Mouser,81-GRM219R61C226ME1K,0.33,0.66
+4,VJ0402A100FXQCW1BC,CAP CER 10PF 10V C0G/NP0 0402,"C5, C6",CMP-2008-01705-1,Released,Up to date,2,Vishay,VJ0402A100FXQCW1BC,Volume Production,Mouser,77-VJ0402A100FXQCBC,0.19,0.38
+5,CL05B104KO5NNNC,"Chip Capacitor, 100 nF, +/- 10%, 16 V, -55 to 125 degC, 0402 (1005 Metric), RoHS, Tape and Reel","C8, C9, C10, C11, C12, C14, C15, C16",CMP-2000-05439-1,Released,Up to date,8,Samsung Electro-Mechanics,CL05B104KO5NNNC,Volume Production,DigiKey,1276-1001-6-ND,0.021,0.21
+6,GRM155R71C103KA01D,"Chip Capacitor, 10 nF, 16 V, 10%, -55 to 125 degC, 0402 (1005 Metric), RoHS, Tape and Reel","C17, C18",CMP-2000-06332-1,Released,Up to date,2,Murata,GRM155R71C103KA01D,Not Recommended for New Design,Newark,GRM155R71C103KA01D,0.012,0.12
+7,150040VS73240,"Wurth Elektronik LED, WL-SMCC, 1005 (0402), 570 nm, 1 x 0.5 x 0.4mm","D1, D2",CMP-03913-90235559-3,New From Design,Up to date,2,Wurth Elektronik,150040VS73240,Volume Production,Mouser,710-150040VS73240,0.31,0.62
+8,BLM18AG121SN1D,"Chip Ferrite Bead, 0603, 120O @ 100MHz, 0.18O, 25%, 800mA",FB1,CMP-0686-00439-3,Released,Up to date,1,Murata,BLM18AG121SN1D,Volume Production,DigiKey,490-1011-6-ND,0.1,0.1
+9,473460001,CONN RCPT USB2.0 MICRO B SMD R/A,J1,CMP-2000-05246-2,New From Design,Up to date,1,Molex,47346-0001,Volume Production,RS (Formerly Allied Electronics),47346-0001,0.36,0.36
+10,TC2030-MCP-NL,CABLE TAG-CONNECT IN-CIRCUIT,J2,CMP-205963-000002-1,New From Design,Up to date,1,Tag-Connect,TC2030-MCP-NL,Unknown,DigiKey,TC2030-MCP-NLTC-ND,36,36
+11,SM06B-GHS-TB(LF)(SN),CONN HEADER SMD R/A 6POS 1.25MM,J3,CMP-17439-000061-1,New From Design,Up to date,1,JST,SM06B-GHS-TB(LF)(SN),Volume Production,Mouser,306-SM06BGHSTBLFSN,0.48,0.48
+12,RC0402FR-071KL,RES 1K OHM 1% 1/16W 0402,"R1, R4",CMP-2002-07472-3,Released,Up to date,2,Yageo Group,RC0402FR-071KL,Volume Production,Mouser,603-RC0402FR-071KL,0.01,0.1
+13,AC0402FR-7W2K2L,RES 2.2kO ±1% 0.125W 0402,"R2, R3",CMP-03412-048432-1,New From Design,Up to date,2,Yageo Group,AC0402FR-7W2K2L,Volume Production,Mouser,603-AC0402FR-7W2K2L,0.011,0.11
+14,CRCW040210K0FKEDC,RES 10K OHM 1% 1/16W 0402,"R5, R7",CMP-02407-012085-1,New From Design,Up to date,2,Vishay,CRCW040210K0FKEDC,Volume Production,Mouser,71-CRCW040210K0FKEDC,0.1,0.2
+15,RC1005J000CS,"Chip Resistor, 0 Ohm, +/- 5%, -55 to 125 degC, 0402 (1005 Metric), RoHS, Tape and Reel",R6,CMP-2000-06964-1,Released,Up to date,1,Samsung Electro-Mechanics,RC1005J000CS,Not Recommended for New Design,DigiKey,1276-3480-1-ND,0.1,0.1
+16,AMS1117-3.3,"LDO Voltage Regulators 1A, 3.3V",U1,CMP-209535-000001-1,New From Design,Up to date,1,EVVO,AMS1117-3.3,Volume Production,DigiKey,5272-AMS1117-3.3CT-ND,,
+17,STM32F411CEU6,"ARM Cortex-M4 32-bit MCU+FPU, 512 KB Flash, 128 KB RAM, 36 I/Os, 48-Pin UFQFPN, -40 to 85 degC, Tray",U3,CMP-0243-00165-1,Released,Up to date,1,STMicroelectronics,STM32F411CEU6,Volume Production,Arrow Electronics,STM32F411CEU6,4.59,4.59
+18,MPU-6050,"3-Axis Gyroscope, Accelerometer and a Digital Motion Processor(TM) (DMP), 2.375 to 3.46 V, -40 to 85 degC, 24-Pin QFN, RoHS, Tape and Reel",U4,CMP-1753-00002-2,Released,Up to date,1,TDK,MPU-6050,Volume Production,DigiKey,1428-1007-1-ND,,
+19,XRCGB24M000F3M00R0,CRYSTAL 24.0000MHZ 6PF SMD,Y1,CMP-06054-000017-1,New From Design,Up to date,1,Murata,XRCGB24M000F3M00R0,Volume Production,Arrow Electronics,XRCGB24M000F3M00R0,0.2794,0.2794

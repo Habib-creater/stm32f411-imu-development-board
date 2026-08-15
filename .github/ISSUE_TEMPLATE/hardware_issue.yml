@@ -1,0 +1,22 @@
+name: Hardware Design Issue
+description: Report a problem with the schematic, PCB, BOM, or manufacturing files
+title: "[HW] "
+labels: ["hardware"]
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue
+      description: Describe the problem clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Include ERC/DRC results, measurements, screenshots, or reproduction steps.
+  - type: textarea
+    id: revision
+    attributes:
+      label: Revision
+      description: State the PCB/project revision or commit where the issue occurs.

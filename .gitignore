@@ -1,0 +1,28 @@
+# Altium Designer
+*.PrjPcbPreview
+*.PrjPcbStructure.bak
+*.SchDocPreview
+*.PcbDocPreview
+*.lck
+*.tmp
+*.bak
+__Previews/
+History/
+Project Outputs for *
+CAMtastic/
+*.ddb
+*.mdb
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build / generated archives
+*.zip
+*.7z
+*.rar
+
+# Logs
+*.log
