@@ -90,9 +90,8 @@ manufacturing Gerbers, drill files, BOM, and documentation renders.
   <img src="docs/images/STM32_layout5.png" alt="STM32F411 Four Layer PCB View" width="700">
 </p>
 
-Additional board renders and PCB views are available in:
-
-[**docs/images/**](docs/images/)
+Additional board renders and PCB views are available in
+[**docs/images/**](docs/images/).
 
 ---
 
@@ -185,7 +184,7 @@ The power section includes:
 - Micro-USB input
 - USB 5 V supply
 - Power filtering
-- AMS1117-3.3 voltage regulation
+- AMS1117-3.3 V voltage regulation
 
 ### 4. Debug and Expansion
 
@@ -204,7 +203,7 @@ The board provides access to:
 The board uses a **4-layer PCB** designed using **Altium Designer**.
 
 The multilayer design provides a structured routing environment for
-the MCU, IMU, USB interface, power distribution and supporting circuitry.
+the MCU, IMU, USB interface, power distribution, and supporting circuitry.
 
 ### PCB Characteristics
 
@@ -220,7 +219,7 @@ the MCU, IMU, USB interface, power distribution and supporting circuitry.
 - 24 MHz clock circuitry
 
 > The exact fabrication stack-up, dielectric thickness, copper weight,
-> impedance requirements and manufacturing tolerances should be confirmed
+> impedance requirements, and manufacturing tolerances should be confirmed
 > with the PCB manufacturer before fabrication.
 
 ---
@@ -250,18 +249,7 @@ The native Altium Designer project is located in:
 
 1. Install a compatible version of **Altium Designer**.
 2. Clone this repository.
-3. Open:
+3. Open the Altium project:
 
 ```text
 hardware/altium/STM32_PCB.PrjPcb
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Author
-
-**Habib Ur Rehman**  
-Electronics Engineering, University of Engineering and Technology Peshawar (Abbottabad Campus)
-
-[GitHub](https://github.com/Habib-creater) · [LinkedIn](www.linkedin.com/in/habib-ur-rehman-8321182b4)
