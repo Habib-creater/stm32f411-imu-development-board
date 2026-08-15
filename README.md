@@ -254,3 +254,14 @@ The native Altium Designer project is located in:
 
 ```text
 hardware/altium/STM32_PCB.PrjPcb
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Author
+
+**Habib Ur Rehman**  
+Electronics Engineering, University of Engineering and Technology Peshawar (Abbottabad Campus)
+
+[GitHub](https://github.com/Habib-creater) · [LinkedIn](www.linkedin.com/in/habib-ur-rehman-8321182b4)
