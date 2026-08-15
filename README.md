@@ -1,66 +1,115 @@
 # STM32F411 IMU Development Board
 
 <p align="center">
-  <img src="docs/images/3d_1.png" alt="STM32F411 IMU Development Board" width="750">
+  <img src="docs/images/3d_1.png" alt="STM32F411 IMU Development Board 3D Render" width="700">
 </p>
 
 <p align="center">
-  A compact 4-layer STM32F411 development board featuring an MPU-6050 6-axis IMU, USB connectivity, SWD debugging, GPIO expansion, and regulated 3.3 V power.
+  <b>STM32F411CEU6 • MPU-6050 IMU • USB • SWD • 4-Layer PCB</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/MCU-STM32F411CEU6-blue" alt="STM32F411CEU6">
-  <img src="https://img.shields.io/badge/IMU-MPU--6050-green" alt="MPU-6050">
-  <img src="https://img.shields.io/badge/PCB-4--Layer-orange" alt="4 Layer PCB">
-  <img src="https://img.shields.io/badge/CAD-Altium%20Designer-red" alt="Altium Designer">
-  <img src="https://img.shields.io/badge/USB-Micro--USB-lightgrey" alt="Micro USB">
+  A compact STM32F4-based development board designed for embedded systems, motion sensing, firmware development, and hardware experimentation.
 </p>
 
 ---
 
 ## Overview
 
-The **STM32F411 IMU Development Board** is a compact embedded hardware platform built around the **STM32F411CEU6** microcontroller and **MPU-6050** 6-axis inertial measurement unit.
+The **STM32F411 IMU Development Board** is a custom 4-layer embedded development platform built around the **STM32F411CEU6** microcontroller and **MPU-6050 6-axis IMU**.
 
-The board is designed for embedded development, motion sensing, firmware experimentation, sensor interfacing, and rapid prototyping.
+The board combines a high-performance STM32F4 MCU, motion sensing, USB connectivity, regulated 3.3 V power, SWD debugging, GPIO expansion, and a carefully organized 4-layer PCB design.
 
-The hardware includes USB connectivity, regulated 3.3 V power, SWD programming/debug access, GPIO expansion, reset and boot control, and status indication.
+The complete hardware design package is included in this repository, including the native **Altium Designer project**, schematic, PCB layout, manufacturing Gerbers, drill files, BOM, and documentation renders.
 
-The PCB is designed as a **4-layer board using Altium Designer**, with complete design source files and manufacturing outputs included in this repository.
-
-> **Design Status:** Hardware design files, documentation, BOM, and manufacturing outputs are included. Always validate the schematic, PCB, DRC/ERC results, component availability, and manufacturing files before production.
+> **Design Status:** Hardware design and manufacturing outputs are included for development and evaluation. Always validate the schematic, PCB, ERC/DRC results, and manufacturing outputs before production.
 
 ---
 
-## Features
+## Key Features
 
 | Feature | Details |
 |---|---|
-| Microcontroller | STM32F411CEU6 |
-| IMU | MPU-6050 6-axis accelerometer + gyroscope |
-| USB | Micro-USB connector |
-| Power Input | USB 5 V |
-| Voltage Regulation | AMS1117-3.3 |
-| Debug / Programming | SWD |
-| Sensor Interface | I²C |
-| Expansion | GPIO header |
-| Clock | 24 MHz crystal |
-| PCB | 4-layer PCB |
-| PCB CAD | Altium Designer |
-| Manufacturing | Gerber + drill files |
-| Documentation | Schematic PDF, PCB views, BOM, manufacturing outputs |
+| **Microcontroller** | STM32F411CEU6 |
+| **IMU** | MPU-6050 6-axis accelerometer + gyroscope |
+| **USB** | Micro-USB connectivity |
+| **Power Input** | USB 5 V |
+| **Voltage Regulation** | AMS1117-3.3 |
+| **Programming / Debugging** | SWD |
+| **IMU Interface** | I²C |
+| **Expansion** | GPIO header |
+| **Reset** | NRST |
+| **Boot Control** | BOOT0 |
+| **Clock** | 24 MHz crystal |
+| **PCB** | 4-layer PCB |
+| **EDA Software** | Altium Designer |
+| **Manufacturing Data** | Gerber + drill files |
+| **Documentation** | Schematic, PCB renders, layer views and BOM |
+
+---
+
+## Board Highlights
+
+- **STM32F411CEU6** ARM Cortex-M4 microcontroller
+- **MPU-6050** 6-axis inertial measurement unit
+- **4-layer PCB** for improved routing, power distribution and signal integrity
+- **Micro-USB** interface for power and USB communication
+- **AMS1117-3.3** voltage regulation
+- Dedicated **SWD programming/debugging interface**
+- **GPIO expansion header**
+- **NRST and BOOT0** control
+- On-board status indication
+- **24 MHz crystal oscillator**
+- Complete **Altium Designer source files**
+- Production-ready **Gerber and drill output package**
+- Exported **schematic PDF**
+- Component **BOM**
+- PCB layout and 3D visualization images
+
+---
+
+## PCB Preview
+
+### 3D Board Render
+
+<p align="center">
+  <img src="docs/images/3d_1.png" alt="STM32F411 IMU Board 3D Render" width="700">
+</p>
+
+### PCB Layout — Top View
+
+<p align="center">
+  <img src="docs/images/STM32_layout1.png" alt="STM32F411 PCB Layout Top View" width="700">
+</p>
+
+### PCB Layer View
+
+<p align="center">
+  <img src="docs/images/STM32_layout5.png" alt="STM32F411 PCB Layer View" width="700">
+</p>
+
+Additional PCB renders and layout views are available in:
+
+[`docs/images/`](docs/images/)
 
 ---
 
 ## Hardware Architecture
 
-The board is organized into four primary functional sections:
+The board is organized into four primary functional blocks:
 
-### 1. STM32F411CEU6 Microcontroller
+### 1. STM32F411CEU6 MCU
 
-The STM32F411CEU6 acts as the main processing and control device for the board.
+The STM32F411CEU6 provides the main processing and control functionality of the board.
 
-It provides the processing resources required for firmware development, peripheral control, sensor communication, USB connectivity, and external GPIO interfacing.
+It is responsible for:
+
+- Application firmware
+- USB communication
+- IMU data processing
+- GPIO control
+- External peripheral interfacing
+- Debugging through SWD
 
 ### 2. MPU-6050 IMU
 
@@ -70,89 +119,114 @@ The MPU-6050 provides:
 - 3-axis gyroscope
 - I²C communication
 
-The IMU is connected to the STM32F411 through the I²C interface.
+This makes the board suitable for motion sensing, orientation experiments, robotics, embedded control systems, and IMU-based applications.
 
 ### 3. USB and Power
 
 The board accepts power through the Micro-USB connector.
 
-The power section provides:
+The power section includes:
 
 - USB 5 V input
 - Power filtering
 - 3.3 V regulation
 - AMS1117-3.3 regulator
 
-The regulated 3.3 V rail supplies the board's low-voltage circuitry.
+The regulated 3.3 V rail supplies the MCU, IMU and other low-voltage circuitry.
 
 ### 4. Debug and Expansion
 
-The board provides interfaces for development and external integration, including:
+The board provides convenient access to:
 
 - SWD programming/debugging
-- GPIO expansion
-- NRST reset control
-- BOOT0 boot configuration
-- Status indication
+- GPIO
+- NRST
+- BOOT0
+- I²C interface
+
+This allows the board to be used as a development and experimentation platform rather than only as a standalone embedded controller.
 
 ---
 
-## Key Interfaces
+## Interfaces
 
-| Interface | Purpose |
+| Interface | Function |
 |---|---|
-| USB | Power and USB data |
-| SWD | Programming and debugging |
-| I²C | MPU-6050 communication |
-| GPIO | External expansion |
-| NRST | MCU reset |
-| BOOT0 | MCU boot configuration |
+| **USB** | Power and USB communication |
+| **SWD** | Programming and debugging |
+| **I²C** | MPU-6050 communication |
+| **GPIO** | External peripheral expansion |
+| **NRST** | MCU reset |
+| **BOOT0** | Boot mode selection |
 
 ---
 
 ## PCB Design
 
-The board uses a **4-layer PCB architecture** designed in Altium Designer.
+The board uses a **4-layer PCB stack-up** designed to provide a more structured routing environment compared with a basic 2-layer board.
 
-The repository includes the native Altium project together with the associated schematic, PCB layout, project configuration, CAM files, and manufacturing outputs.
+The 4-layer design provides dedicated routing and power/ground planes while helping keep the MCU, IMU, USB and supporting circuitry organized.
 
-### PCB Design Highlights
+The PCB was designed using **Altium Designer**.
+
+### PCB Design Characteristics
 
 - 4-layer PCB
-- STM32F411CEU6 MCU
-- MPU-6050 IMU
-- USB connectivity
-- 3.3 V regulated power rail
-- SWD programming/debug interface
+- Digital and power routing
+- Dedicated ground/power plane structure
+- Compact component placement
+- USB interface routing
+- MCU decoupling network
+- IMU interface routing
+- SWD programming interface
 - GPIO expansion
-- Dedicated reset and boot circuitry
-- Status LED circuitry
-- 24 MHz crystal oscillator
+- Through-hole and SMD components where applicable
+
+> The exact fabrication stack-up, dielectric thickness, copper weight and impedance requirements should be confirmed with the PCB manufacturer before fabrication.
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```text
 .
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│
 ├── hardware/
-│   ├── altium/                     # Native Altium project and design files
-│   └── cam/                        # Altium CAM/CAMtastic files
+│   ├── altium/
+│   │   ├── STM32_PCB.PrjPcb
+│   │   ├── STM32_PCB.PcbDoc
+│   │   ├── STM32_Schematics.SchDoc
+│   │   ├── STM32_PCB.OutJob
+│   │   ├── STM32_PCB.BomDoc
+│   │   └── ...
+│   │
+│   └── cam/
+│       └── ...
 │
 ├── manufacturing/
-│   └── gerbers/                    # Gerber and drill manufacturing outputs
+│   └── gerbers/
+│       ├── Gerber files
+│       ├── Drill files
+│       └── Manufacturing outputs
 │
 ├── bom/
-│   └── STM32_PCB_BOM.csv           # Bill of materials
+│   └── STM32_PCB_BOM.csv
 │
 ├── docs/
 │   ├── schematics/
-│   │   └── STM32_Schematics.pdf    # Exported schematic
+│   │   └── STM32_Schematics.pdf
 │   │
-│   └── images/                     # PCB renders and layout images
-│
-├── .github/
-│   └── ISSUE_TEMPLATE/             # GitHub issue templates
+│   └── images/
+│       ├── 3d_1.png
+│       ├── 3d_2.png
+│       ├── 3d_3.png
+│       ├── STM32_layout1.png
+│       ├── STM32_layout2.png
+│       ├── STM32_layout3.png
+│       ├── STM32_layout4.png
+│       └── STM32_layout5.png
 │
 ├── .gitignore
 ├── CONTRIBUTING.md
