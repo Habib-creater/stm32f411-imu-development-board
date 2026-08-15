@@ -5,33 +5,41 @@
 </p>
 
 <p align="center">
-  <b>STM32F411CEU6 • MPU-6050 IMU • USB • SWD • 4-Layer PCB</b>
+  <strong>STM32F411CEU6 • MPU-6050 IMU • USB • SWD • 4-Layer PCB</strong>
 </p>
 
 <p align="center">
-  A compact STM32F4-based development board designed for embedded systems,
+  A custom STM32F4 development board designed for embedded systems,
   motion sensing, firmware development, and hardware experimentation.
+</p>
+
+<p align="center">
+  <a href="docs/schematics/STM32_Schematics.pdf">Schematic</a> •
+  <a href="bom/STM32_PCB_BOM.csv">BOM</a> •
+  <a href="manufacturing/gerbers/">Gerbers</a> •
+  <a href="hardware/altium/">Altium Files</a>
 </p>
 
 ---
 
 ## Overview
 
-The **STM32F411 IMU Development Board** is a custom 4-layer embedded
-development platform built around the **STM32F411CEU6** microcontroller
+The **STM32F411 IMU Development Board** is a custom **4-layer embedded
+development platform** built around the **STM32F411CEU6** microcontroller
 and **MPU-6050 6-axis IMU**.
 
-The board combines a high-performance STM32F4 MCU, motion sensing,
-USB connectivity, regulated 3.3 V power, SWD debugging, GPIO expansion,
-and a carefully organized 4-layer PCB design.
+The board integrates a high-performance STM32F4 MCU, motion sensing,
+USB connectivity, regulated 3.3 V power, SWD programming/debugging,
+GPIO expansion, and I²C communication in a compact PCB design.
 
 The complete hardware design package is included in this repository,
 including the native **Altium Designer project**, schematic, PCB layout,
-manufacturing Gerbers, drill files, BOM, and documentation renders.
+Gerber and drill manufacturing outputs, BOM, and PCB documentation.
 
-> **Design Status:** Hardware design and manufacturing outputs are included
-> for development and evaluation. Always validate the schematic, PCB,
-> ERC/DRC results, and manufacturing outputs before production.
+> **Design Status:** Hardware design and manufacturing outputs are
+> provided for development and evaluation. Always independently verify
+> the schematic, PCB, ERC/DRC results, and manufacturing outputs before
+> production.
 
 ---
 
@@ -41,7 +49,7 @@ manufacturing Gerbers, drill files, BOM, and documentation renders.
 |---|---|
 | 📐 [Schematic PDF](docs/schematics/STM32_Schematics.pdf) | Complete electrical schematic |
 | 📦 [Bill of Materials](bom/STM32_PCB_BOM.csv) | Component BOM |
-| 🏭 [Gerber Files](manufacturing/gerbers/) | PCB manufacturing outputs |
+| 🏭 [Gerber & Drill Files](manufacturing/gerbers/) | PCB manufacturing outputs |
 | 🔧 [Altium Project](hardware/altium/) | Native Altium design files |
 | 🖼️ [PCB Images](docs/images/) | 3D renders and PCB views |
 | 🤝 [Contributing](CONTRIBUTING.md) | Contribution guidelines |
@@ -103,7 +111,7 @@ The complete electrical schematic is available as a PDF:
 
 The schematic includes:
 
-- STM32F411CEU6 MCU
+- STM32F411CEU6 microcontroller
 - MPU-6050 IMU
 - USB interface
 - 3.3 V power regulation
@@ -158,20 +166,24 @@ The manufacturing package includes:
 Before fabrication, verify the complete Gerber package using an
 independent Gerber viewer.
 
+> Confirm the PCB stack-up, board thickness, copper weight, surface
+> finish, impedance requirements, and manufacturing tolerances with
+> your PCB manufacturer before production.
+
 ---
 
 ## Hardware Architecture
 
-The board is organized into four primary functional blocks:
+The board is organized into four primary functional blocks.
 
 ### 1. STM32F411CEU6 MCU
 
-The STM32F411CEU6 provides the main processing and control functionality
-of the board.
+The **STM32F411CEU6** provides the main processing and control
+functionality of the board.
 
 ### 2. MPU-6050 IMU
 
-The MPU-6050 provides:
+The **MPU-6050** provides:
 
 - 3-axis accelerometer
 - 3-axis gyroscope
@@ -203,7 +215,8 @@ The board provides access to:
 The board uses a **4-layer PCB** designed using **Altium Designer**.
 
 The multilayer design provides a structured routing environment for
-the MCU, IMU, USB interface, power distribution, and supporting circuitry.
+the MCU, IMU, USB interface, power distribution, and supporting
+circuitry.
 
 ### PCB Characteristics
 
@@ -219,8 +232,8 @@ the MCU, IMU, USB interface, power distribution, and supporting circuitry.
 - 24 MHz clock circuitry
 
 > The exact fabrication stack-up, dielectric thickness, copper weight,
-> impedance requirements, and manufacturing tolerances should be confirmed
-> with the PCB manufacturer before fabrication.
+> impedance requirements, and manufacturing tolerances should be
+> confirmed with the PCB manufacturer before fabrication.
 
 ---
 
@@ -252,7 +265,103 @@ The native Altium Designer project is located in:
 3. Open the Altium project:
 
 ```text
-hardware/altium/STM32_PCB.PrjPcb```
+hardware/altium/STM32_PCB.PrjPcb
+```
+
+4. Review the schematic and component connectivity.
+5. Review the PCB layout and design rules.
+6. Run ERC and DRC checks.
+7. Review and resolve relevant warnings and violations.
+8. Regenerate manufacturing outputs if the design is modified.
+9. Verify the generated Gerber package before fabrication.
+
+### PCB Fabrication
+
+1. Download the files from
+   [`manufacturing/gerbers/`](manufacturing/gerbers/).
+2. Open the Gerber package using an independent Gerber viewer.
+3. Verify the board outline and drill files.
+4. Confirm the required PCB stack-up and layer order.
+5. Confirm board thickness, copper weight, surface finish, and
+   manufacturing tolerances.
+6. Submit the verified manufacturing package to the PCB manufacturer.
+
+> Do not fabricate modified design files without first performing a
+> complete design review and manufacturing-output verification.
+
+---
+
+## Repository Structure
+
+```text
+.
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│
+├── hardware/
+│   ├── altium/
+│   │   ├── STM32_PCB.PrjPcb
+│   │   ├── STM32_PCB.PcbDoc
+│   │   ├── STM32_Schematics.SchDoc
+│   │   ├── STM32_PCB.OutJob
+│   │   ├── STM32_PCB.BomDoc
+│   │   └── ...
+│   │
+│   └── cam/
+│       └── ...
+│
+├── manufacturing/
+│   └── gerbers/
+│
+├── bom/
+│   └── STM32_PCB_BOM.csv
+│
+├── docs/
+│   ├── images/
+│   │   ├── 3d_1.png
+│   │   ├── 3d_2.png
+│   │   ├── 3d_3.png
+│   │   ├── STM32_layout1.png
+│   │   ├── STM32_layout2.png
+│   │   ├── STM32_layout3.png
+│   │   ├── STM32_layout4.png
+│   │   └── STM32_layout5.png
+│   │
+│   └── schematics/
+│       └── STM32_Schematics.pdf
+│
+├── .gitignore
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
+```
+
+---
+
+## Design Validation
+
+Before production, independently verify:
+
+- Schematic connectivity
+- Component values
+- Component ratings
+- PCB footprints
+- ERC results
+- DRC results
+- USB routing
+- Power distribution
+- Grounding
+- Decoupling
+- Crystal oscillator layout
+- IMU placement and routing
+- SWD connectivity
+- Board outline
+- Gerber outputs
+- Drill files
+- 4-layer stack-up
+
+The design files are provided for development and evaluation and should
+be independently reviewed before production.
 
 ---
 
@@ -309,10 +418,6 @@ For hardware revisions, clearly document:
 
 This project is licensed under the **MIT License**.
 
-The MIT License permits use, copying, modification, merging, publishing,
-distribution, sublicensing, and sale of copies of the licensed work,
-subject to the conditions stated in the license.
-
 The complete license terms are available in the
 [`LICENSE`](LICENSE) file in the root of this repository.
 
@@ -331,7 +436,7 @@ The complete license terms are available in the
 **Electronics Engineering**  
 **University of Engineering and Technology Peshawar (Abbottabad Campus)**
 
-I am an Electronics Engineering student interested in embedded systems,
+Electronics Engineering student interested in embedded systems,
 PCB design, microcontrollers, electronics hardware, and hardware
 development.
 
@@ -344,6 +449,6 @@ development.
 ---
 
 <p align="center">
-  <b>STM32F411 IMU Development Board</b><br>
+  <strong>STM32F411 IMU Development Board</strong><br>
   Custom 4-Layer STM32F4 Embedded Hardware Platform
 </p>
