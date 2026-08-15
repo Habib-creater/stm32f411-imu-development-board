@@ -175,7 +175,3 @@ If you intend to publish the design for reuse, choose an appropriate hardware li
 ## Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution and revision guidelines.
-
-## Suggested GitHub Topics
-
-`stm32` `stm32f4` `stm32f411` `mpu6050` `imu` `embedded` `electronics` `pcb` `altium` `hardware` `swd` `usb` `gerber`
