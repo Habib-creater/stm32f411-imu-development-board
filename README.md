@@ -36,10 +36,7 @@ The complete hardware design package is included in this repository,
 including the native **Altium Designer project**, schematic, PCB layout,
 manufacturing Gerbers, drill files, BOM, and PCB documentation.
 
-> **Design Status:** Hardware design and manufacturing outputs are
-> provided for development and evaluation. Always independently verify
-> the schematic, PCB, ERC/DRC results, and manufacturing outputs before
-> production.
+> **Status:** Design files and manufacturing outputs included.
 
 ---
 
@@ -131,21 +128,8 @@ The current component BOM is available here:
 
 ### 📦 [View / Download STM32 PCB BOM](bom/STM32_PCB_BOM.csv)
 
-The BOM provides the component information associated with the current
+The BOM contains the component information associated with the current
 hardware design.
-
-Before procurement, verify:
-
-- Component availability
-- Manufacturer part numbers
-- Component ratings
-- Package and footprint compatibility
-- Lifecycle status
-- Approved substitutions
-- Distributor availability
-
-> Component availability and specifications may change over time.
-> Always verify the BOM against the latest design files before ordering.
 
 ---
 
@@ -165,13 +149,6 @@ The manufacturing package includes:
 - Plated drill files
 - Non-plated drill files
 - Assembly/component information where applicable
-
-Before fabrication, verify the complete Gerber package using an
-independent Gerber viewer.
-
-> Confirm the PCB stack-up, board thickness, copper weight, surface
-> finish, impedance requirements, and manufacturing tolerances with
-> the PCB manufacturer before production.
 
 ---
 
@@ -234,10 +211,6 @@ circuitry.
 - Power regulation
 - 24 MHz clock circuitry
 
-> The exact fabrication stack-up, dielectric thickness, copper weight,
-> impedance requirements, and manufacturing tolerances should be
-> confirmed with the PCB manufacturer before fabrication.
-
 ---
 
 ## Design Files
@@ -271,26 +244,19 @@ The native Altium Designer project is located in:
 hardware/altium/STM32_PCB.PrjPcb
 ```
 
-4. Review the schematic and component connectivity.
-5. Review the PCB layout and design rules.
-6. Run ERC and DRC checks.
-7. Review and resolve relevant warnings and violations.
-8. Regenerate manufacturing outputs if the design is modified.
-9. Verify the generated Gerber package before fabrication.
+The native project files are organized within the repository structure
+alongside the associated schematic, PCB, and project documents.
 
 ### PCB Fabrication
 
-1. Download the files from
-   [`manufacturing/gerbers/`](manufacturing/gerbers/).
-2. Open the Gerber package using an independent Gerber viewer.
-3. Verify the board outline and drill files.
-4. Confirm the required PCB stack-up and layer order.
-5. Confirm board thickness, copper weight, surface finish, and
-   manufacturing tolerances.
-6. Submit the verified manufacturing package to the PCB manufacturer.
+The generated manufacturing package is available in:
 
-> Do not fabricate modified design files without first performing a
-> complete design review and manufacturing-output verification.
+```text
+manufacturing/gerbers/
+```
+
+The directory contains the Gerber and drill files associated with the
+current PCB design.
 
 ---
 
@@ -341,33 +307,6 @@ hardware/altium/STM32_PCB.PrjPcb
 
 ---
 
-## Design Validation
-
-Before production, independently verify:
-
-- Schematic connectivity
-- Component values
-- Component ratings
-- PCB footprints
-- ERC results
-- DRC results
-- USB routing
-- Power distribution
-- Grounding
-- Decoupling
-- Crystal oscillator layout
-- IMU placement and routing
-- SWD connectivity
-- Board outline
-- Gerber outputs
-- Drill files
-- 4-layer stack-up
-
-The design files are provided for development and evaluation and should
-be independently reviewed before production.
-
----
-
 ## Project Status
 
 | Item | Status |
@@ -380,18 +319,17 @@ be independently reviewed before production.
 | Gerber Files | ✅ Generated |
 | Drill Files | ✅ Generated |
 | Documentation | ✅ Included |
-| Hardware Validation | 🔬 To be performed |
 
 ---
 
 ## Acknowledgements
 
-The design documentation and associated hardware files are maintained
-as part of this repository.
+The repository contains the complete hardware design package and
+associated technical documentation for the STM32F411 IMU Development
+Board.
 
-The repository contains the complete design package, including the
-schematic, PCB layout, Altium project files, BOM, manufacturing outputs,
-and supporting documentation.
+The design package includes the schematic, PCB layout, Altium project
+files, BOM, manufacturing outputs, and supporting documentation.
 
 ---
 
@@ -435,8 +373,8 @@ The complete license terms are available in the
 **Electronics Engineering**  
 **University of Engineering and Technology Peshawar (Abbottabad Campus)**
 
-Focused on embedded systems, PCB design, microcontrollers, electronics
-hardware, and hardware development.
+Embedded systems, PCB design, microcontrollers, electronics hardware,
+and hardware development.
 
 ### Connect
 
