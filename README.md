@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  A custom STM32F4 development board designed for embedded systems,
-  motion sensing, firmware development, and hardware experimentation.
+  A compact STM32F4-based development platform for embedded systems,
+  motion sensing, and hardware development.
 </p>
 
 <p align="center">
@@ -29,12 +29,12 @@ development platform** built around the **STM32F411CEU6** microcontroller
 and **MPU-6050 6-axis IMU**.
 
 The board integrates a high-performance STM32F4 MCU, motion sensing,
-USB connectivity, regulated 3.3 V power, SWD programming/debugging,
+USB connectivity, regulated 3.3 V power, SWD programming and debugging,
 GPIO expansion, and I²C communication in a compact PCB design.
 
 The complete hardware design package is included in this repository,
 including the native **Altium Designer project**, schematic, PCB layout,
-Gerber and drill manufacturing outputs, BOM, and PCB documentation.
+manufacturing Gerbers, drill files, BOM, and PCB documentation.
 
 > **Design Status:** Hardware design and manufacturing outputs are
 > provided for development and evaluation. Always independently verify
@@ -74,7 +74,7 @@ Gerber and drill manufacturing outputs, BOM, and PCB documentation.
 | **PCB** | 4-layer PCB |
 | **EDA Software** | Altium Designer |
 | **Manufacturing Data** | Gerber + drill files |
-| **Documentation** | Schematic, PCB renders, layer views and BOM |
+| **Documentation** | Schematic, PCB renders, layer views, and BOM |
 
 ---
 
@@ -95,7 +95,7 @@ Gerber and drill manufacturing outputs, BOM, and PCB documentation.
 ### PCB Layer View
 
 <p align="center">
-  <img src="docs/images/STM32_layout5.png" alt="STM32F411 Four Layer PCB View" width="700">
+  <img src="docs/images/STM32_layout5.png" alt="STM32F411 Four-Layer PCB View" width="700">
 </p>
 
 Additional board renders and PCB views are available in
@@ -130,6 +130,9 @@ The schematic includes:
 The current component BOM is available here:
 
 ### 📦 [View / Download STM32 PCB BOM](bom/STM32_PCB_BOM.csv)
+
+The BOM provides the component information associated with the current
+hardware design.
 
 Before procurement, verify:
 
@@ -168,7 +171,7 @@ independent Gerber viewer.
 
 > Confirm the PCB stack-up, board thickness, copper weight, surface
 > finish, impedance requirements, and manufacturing tolerances with
-> your PCB manufacturer before production.
+> the PCB manufacturer before production.
 
 ---
 
@@ -383,16 +386,12 @@ be independently reviewed before production.
 
 ## Acknowledgements
 
-The electrical design was developed using publicly available reference
-material. The schematic was reviewed and electrically verified as part
-of this project.
+The design documentation and associated hardware files are maintained
+as part of this repository.
 
-The PCB layout, component placement, routing, 4-layer board design,
-Altium project organization, BOM, manufacturing outputs, documentation,
-and repository organization were created by the author.
-
-Third-party reference material remains subject to its original copyright
-and licensing terms.
+The repository contains the complete design package, including the
+schematic, PCB layout, Altium project files, BOM, manufacturing outputs,
+and supporting documentation.
 
 ---
 
@@ -423,9 +422,9 @@ The complete license terms are available in the
 
 **Copyright © 2026 Habib Ur Rehman**
 
-> **Note:** Third-party reference material used in the development of
-> this project remains subject to its original copyright and licensing
-> terms and is not relicensed by this repository.
+> **Note:** Third-party reference material, if present in the repository,
+> remains subject to its original copyright and licensing terms and is
+> not relicensed by this repository.
 
 ---
 
@@ -436,9 +435,8 @@ The complete license terms are available in the
 **Electronics Engineering**  
 **University of Engineering and Technology Peshawar (Abbottabad Campus)**
 
-Electronics Engineering student interested in embedded systems,
-PCB design, microcontrollers, electronics hardware, and hardware
-development.
+Focused on embedded systems, PCB design, microcontrollers, electronics
+hardware, and hardware development.
 
 ### Connect
 
