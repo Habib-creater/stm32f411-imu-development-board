@@ -360,10 +360,6 @@ The complete license terms are available in the
 
 **Copyright © 2026 Habib Ur Rehman**
 
-> **Note:** Third-party reference material, if present in the repository,
-> remains subject to its original copyright and licensing terms and is
-> not relicensed by this repository.
-
 ---
 
 ## Author
