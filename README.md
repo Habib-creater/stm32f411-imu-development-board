@@ -44,12 +44,12 @@ manufacturing Gerbers, drill files, BOM, and PCB documentation.
 
 | Resource | Description |
 |---|---|
-| 📐 [Schematic PDF](docs/schematics/STM32_Schematics.pdf) | Complete electrical schematic |
-| 📦 [Bill of Materials](bom/STM32_PCB_BOM.csv) | Component BOM |
-| 🏭 [Gerber & Drill Files](manufacturing/gerbers/) | PCB manufacturing outputs |
-| 🔧 [Altium Project](hardware/altium/) | Native Altium design files |
-| 🖼️ [PCB Images](docs/images/) | 3D renders and PCB views |
-| 🤝 [Contributing](CONTRIBUTING.md) | Contribution guidelines |
+|  [Schematic PDF](docs/schematics/STM32_Schematics.pdf) | Complete electrical schematic |
+|  [Bill of Materials](bom/STM32_PCB_BOM.csv) | Component BOM |
+|  [Gerber & Drill Files](manufacturing/gerbers/) | PCB manufacturing outputs |
+|  [Altium Project](hardware/altium/) | Native Altium design files |
+|  [PCB Images](docs/images/) | 3D renders and PCB views |
+|  [Contributing](CONTRIBUTING.md) | Contribution guidelines |
 
 ---
 
@@ -104,7 +104,7 @@ Additional board renders and PCB views are available in
 
 The complete electrical schematic is available as a PDF:
 
-### 📐 [View STM32F411 Schematic PDF](docs/schematics/STM32_Schematics.pdf)
+###  [View STM32F411 Schematic PDF](docs/schematics/STM32_Schematics.pdf)
 
 The schematic includes:
 
@@ -126,7 +126,7 @@ The schematic includes:
 
 The current component BOM is available here:
 
-### 📦 [View / Download STM32 PCB BOM](bom/STM32_PCB_BOM.csv)
+###  [View / Download STM32 PCB BOM](bom/STM32_PCB_BOM.csv)
 
 The BOM contains the component information associated with the current
 hardware design.
@@ -137,7 +137,7 @@ hardware design.
 
 Manufacturing files are available under:
 
-### 🏭 [Gerber & Drill Files](manufacturing/gerbers/)
+###  [Gerber & Drill Files](manufacturing/gerbers/)
 
 The manufacturing package includes:
 
