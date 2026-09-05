@@ -367,7 +367,6 @@ The complete license terms are available in the
 ### Habib Ur Rehman
 
 **Electronics Engineering**  
-**University of Engineering and Technology Peshawar (Abbottabad Campus)**
 
 Embedded systems, PCB design, microcontrollers, electronics hardware,
 and hardware development.
@@ -376,7 +375,7 @@ and hardware development.
 
 - **GitHub:** [Habib-creater](https://github.com/Habib-creater)
 - **LinkedIn:** [Habib Ur Rehman](https://www.linkedin.com/in/habib-ur-rehman-8321182b4/)
-- **Project:** [STM32F411 IMU Development Board](https://github.com/Habib-creater/stm32f411-imu-development-board)
+
 
 ---
 
